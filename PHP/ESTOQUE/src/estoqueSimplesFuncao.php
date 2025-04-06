@@ -1,47 +1,17 @@
 <?php
 
 
-require 'c:/Users/israe/OneDrive/Documentos/repositorio/PHP/src/model/ferramenta.php';
-require 'c:/Users/israe/OneDrive/Documentos/repositorio/PHP/src/model/insumo.php';
+require 'c:/Users/israe/OneDrive/Documentos/repositorio/PHP/ESTOQUE/src/model/ferramenta.php';
+require 'c:/Users/israe/OneDrive/Documentos/repositorio/PHP/ESTOQUE/src/model/insumo.php';
+//instancia a classe ferramenta.
+$ferramenta =new Ferramenta('','',0,0);
 
+//chama a classse pu ferramenta.
 
+$ferramenta->putFerramenta (); 
 
-function putFerramenta(){
-   $ferramenta = new Ferramenta();
+//chama a classe que atualiza o numero de uma certa ferrramenta no estoque.
 
-echo "ferramenta\t";
-   $ferramenta ->nome =(string) trim (fgets (STDIN) );
- echo "marca\t";
-   $ferramenta -> marca = (string) trim (fgets (STDIN) );
- echo "valor\t";
-   $ferramenta -> valor = (float) trim (fgets (STDIN) );
- echo "unidade\t";
-   $ferramenta -> unidade = (int) trim (fgets (STDIN) );
-   
-  // Transforma o objeto em um array para ser convertido em JSON
-  $dados = [
-    "nome" => $ferramenta->nome,
-    "marca" => $ferramenta->marca,
-    "valor" => $ferramenta->valor,
-    "unidade" => $ferramenta->unidade,
-];
-  // Converte o array para o formato JSON
-  $json = json_encode($dados, JSON_PRETTY_PRINT);
+$ferramenta -> acrescentarFerramenta();
 
-  // Salva o JSON no arquivo ferramenta.json
-  file_put_contents('../ferramenta.json', $json);
-
- return "Dados salvos no arquivo ferramenta.json com sucesso!\n";
-
-};
-
-function postFerramenta(){
-  $ferramenta = new Ferramenta;
-    $ferramenta -> acrescentarFerramenta();
-
-}
-
-var_dump(putFerramenta ()); 
-postFerramenta();
-// Chama a função para gerar o arquivo JSON
 
