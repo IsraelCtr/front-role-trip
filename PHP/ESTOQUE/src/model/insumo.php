@@ -15,8 +15,8 @@ echo "unidade(s):";
 $Insumo-> unidade = (string) trim(fgets(STDIN));
 
 $dados =[
-    $Insumo->nome,
-    $Insumo->unidade];
+    "nome"=> $Insumo->nome,
+    "qunatidade"=>$Insumo->unidade];
 ;
 $dados = file_put_contents( "../insumo.json", json_encode($dados, JSON_PRETTY_PRINT)) ;
 return "dados salvos em insumo.json";
