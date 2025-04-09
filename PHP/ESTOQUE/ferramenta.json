@@ -1,6 +1,7 @@
 {
-    "nome": "martelo",
+    "nome": "furadeira",
+    "eletrica": true,
     "marca": "vonder",
-    "valor": 30,
-    "unidade": 13
+    "valor": 150,
+    "unidade": 1
 }

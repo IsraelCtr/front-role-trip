@@ -1,8 +1,9 @@
 <?php
+namespace ESTOQUE\src\model;
 class Insumo{
     public function __construct(
         private string $nome,
-        private string $unidade
+        private float $unidade
     ){}
 
 
@@ -12,7 +13,7 @@ class Insumo{
 echo "material consumivel:";
 $Insumo-> nome = (string) trim(fgets(STDIN));
 echo "unidade(s):";
-$Insumo-> unidade = (string) trim(fgets(STDIN));
+$Insumo-> unidade = (float) trim(fgets(STDIN));
 
 $dados =[
     "nome"=> $Insumo->nome,

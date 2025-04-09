@@ -1,8 +1,10 @@
 <?php 
-class Produto{
+namespace ESTOQUE\src\model;
+ class Produto{
     function __construct(
         
         private string $nome,
+        private bool $eletrica,
         private string $marca,
         private float $preco,
         private int $quantidade
@@ -10,10 +12,12 @@ class Produto{
     )
     {}
     function putFerramenta(){
-        $produto = new produto("","",0,0);
+        $produto = new produto("","",'',0,0);
      
      echo "ferramenta\t";
         $produto ->nome =(string) trim (fgets (STDIN) );
+        echo "elétrica? 1 para sim e 0 para não\t";
+        $produto -> eletrica =(bool) trim (fgets (STDIN) );
       echo "marca\t";
         $produto -> marca = (string) trim (fgets (STDIN) );
       echo "valor\t";
@@ -24,6 +28,7 @@ class Produto{
        // Transforma o objeto em um array para ser convertido em JSON
        $dados = [
          "nome" => $produto->nome,
+         "eletrica" => $produto->eletrica,
          "marca" => $produto->marca,
          "valor" => $produto->preco,
          "unidade" => $produto->quantidade,
