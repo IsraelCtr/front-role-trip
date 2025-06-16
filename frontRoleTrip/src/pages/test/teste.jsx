@@ -2,6 +2,7 @@ import { useRef,useEffect,useState } from 'react';
 import airplane from '../../assets/airPlane.svg';
 import './style.css';
 import { Link } from 'react-router-dom';
+import React from 'react';
 import api from '../../services/api.js';
 
 function TestePagina() {

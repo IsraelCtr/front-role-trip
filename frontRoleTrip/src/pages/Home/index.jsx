@@ -4,6 +4,7 @@ import airplane from '../../assets/airPlane.svg'
 import login from '../../assets/login.svg'
 import './style.css'
 import  api from '../../services/api.js'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
