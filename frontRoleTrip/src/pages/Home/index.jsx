@@ -1,6 +1,6 @@
 
 import { useState, useEffect,useRef } from 'react'
-import airplane from '../../assets/airPlane.svg'
+import airplane from '../../assets/airPLane.svg'
 import login from '../../assets/login.svg'
 import './style.css'
 import  api from '../../services/api.js'
