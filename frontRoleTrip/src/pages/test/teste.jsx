@@ -1,5 +1,5 @@
 import { useRef,useEffect,useState } from 'react';
-import airplane from '../../assets/airPlane.svg';
+import airplane from '../../assets/airPLane.svg';
 import './style.css';
 import { Link } from 'react-router-dom';
 import React from 'react';
