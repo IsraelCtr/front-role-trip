@@ -1,2 +1,3 @@
 # estoque
-sistema de um estoque utilizando php.
+  app react use vite.
+  The objective the app help users organized your trips.  
